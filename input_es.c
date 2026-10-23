@@ -13,7 +13,7 @@ int main(){
             if(a>max){
                 max = a;
             }
-            else if(a<min){
+            if(a<min){
                 min = a;
             }
         }
