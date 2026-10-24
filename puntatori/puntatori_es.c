@@ -9,7 +9,6 @@ void swap(int *p,int *v){
 }
 
 int main(){
-
     int a, b;
     scanf("%d%d",&a,&b);
     swap(&a,&b);
