@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Launch",
+      "name": "Debug (Windows GDB)",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/a.out",
@@ -13,36 +13,26 @@
       "externalConsole": false,
       "MIMode": "gdb",
       "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Set Disassembly Flavor to Intel",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
+          {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          },
+          {
+              "description": "Set Disassembly Flavor to Intel",
+              "text": "-gdb-set disassembly-flavor intel",
+              "ignoreFailures": true
+          }
       ]
     },
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "name": "Debug (Termux GDB)",
+      "type": "gdb",
       "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
+      "target": "/data/data/com.termux/files/home/Programmazione/a.out",
       "cwd": "/data/data/com.termux/files/home/Programmazione",
-      "program": "/data/data/com.termux/files/home/Programmazione/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "gdbpath": "/data/data/com.termux/files/usr/bin/gdb",
+      "valuesFormatting": "parseText"
     }
   ]
 }

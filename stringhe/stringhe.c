@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-#define dim 20
+#define DIM 20
 
 //Stringa da minuscolo a MAIUSCOLO
 /*
 int main(){
-    char s[dim];
+    char s[DIM];
     scanf("%s", s);
     int i = 0;
-    for(i = 0; i < dim; i++){
+    for(i = 0; i < DIM; i++){
         if(s[i] >= 'a' && s[i] <= 'z')
             s[i] = s[i] - 32;
     }
@@ -18,7 +18,7 @@ int main(){
 //Confronto ordine alfabetico fra due stringhe
 /*
 int main(){
-    char s1[dim], s2[dim];
+    char s1[DIM], s2[DIM];
     int i = 0;
     scanf("%s%s", s1, s2);
     while(s1[i] != 0 && s2[i] != 0 && s1[i] == s2[i]){
@@ -35,7 +35,7 @@ int main(){
 //Carattere in stringa
 
 int main(){
-    char c, s[dim];
+    char c, s[DIM];
     int i = 0;
     scanf("%c%s", &c, s);
     while(s[i] != 0 && c != s[i])
